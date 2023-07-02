@@ -28,6 +28,8 @@ def print_hi(name,folder_path,html_file_path):
         for filename in os.listdir(folder_path):
             file_path = os.path.join(folder_path, filename)
             html_file.write('<a href="' + file_path + '"' + ' download=' + '"' +filename + '"' + '>' +  filename + '</a><br/>\n')
+            html_file.write('<video controls width ="320" height ="240" > <source src="' + file_path + '" type="video/mp4"></video><br/>\n')
+
 
 
 def create_index_html(name):
