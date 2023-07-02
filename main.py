@@ -20,7 +20,7 @@ def print_hi(name):
     # 定义要遍历的文件夹路径和HTML文件路径
 
     # 打开HTML文件以写入模式
-    with open(html_file_path, 'w') as html_file:
+    with open(html_file_path, 'w',encoding='utf-8') as html_file:
         # 遍历文件夹中的所有文件
         for filename in os.listdir(folder_path):
             file_path = os.path.join(folder_path, filename)
