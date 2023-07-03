@@ -29,10 +29,10 @@ def print_hi(name,folder_path,html_file_path):
         # 遍历文件夹中的所有文件
         for filename in os.listdir(folder_path):
             file_path = os.path.join(folder_path, filename)
-            if filename.endswith('.mp4'):         
+            if filename.endswith('.mp4') or filename.endswith('.mkv') or filename.endswith('.wmv') or filename.endswith('.avi'):         
                 # html_file.write('<a href="' + file_path + '"' + ' download=' + '"' +filename + '"' + '>' +  filename + '</a><br/>\n')
-                html_file.write('<video controls width ="320" height ="240" > <source src="' + file_path + '" type="video/mp4"></video><br/>\n')
-            elif filename.endswith('.pptx') or filename.endswith('.ppt'):
+                html_file.write('<video controls width ="320" height ="240" > <source src="' + file_path + '"></video><br/>\n')
+            elif filename.endswith('.pptx') or filename.endswith('.ppt') or filename.endswith('.pdf') or filename.endswith('.docx'):
                 html_file.write('<a href="' + file_path + '"' + ' download=' + '"' +filename + '"' + '>' +  filename + '</a><br/>\n')
 
 def create_index_html(name):
@@ -87,7 +87,7 @@ def create_index_html(name):
 
 if __name__ == '__main__':
     create_index_html('hello,index_html')
-    print_hi('kengo','KENGO_KUMA & ASSOCIATES','civil.html')
+    print_hi('kengo','SHOP','civil.html')
     # print_hi('building','VIDEO\\CREATIVE_BUILDING','building.html')
     # print_hi('GGR','VIDEO\\VISUAL_SCRIPTING','GGR.html')
 
